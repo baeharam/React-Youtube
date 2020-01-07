@@ -1,15 +1,24 @@
-$sidebar-background-color: rgb(250, 250, 250);
-$sidebar-icon-color: rgb(96, 96, 96);
+$background-color: rgba(0, 0, 0, 0);
+$icon-color: rgb(96, 96, 96);
+$text-color: #0d0d0d;
+$line-color: rgba(0, 0, 0, 0.1);
+$width: 240px;
 
 .sidebar {
-  width: 20%;
+  width: $width;
   height: 100%;
-  background-color: $sidebar-background-color;
+  background-color: $background-color;
+
+  &__item-wrapper {
+    padding: 10px 0;
+  }
 
   &__item {
+    display: flex;
+    align-items: center;
     padding: 10px 0 10px 30px;
     width: 100%;
-    color: $sidebar-icon-color;
+    color: $icon-color;
     text-align: left;
     line-height: 20px;
 
@@ -23,16 +32,21 @@ $sidebar-icon-color: rgb(96, 96, 96);
       font-size: 20px;
     }
     &-img {
-      width: 100%;
-      height: 20px;
+      height: 24px;
+      filter: opacity(70%);
+      -webkit-filter: opacity(70%);
     }
     &-text {
       font-size: 15px;
-      color: black;
-      vertical-align: top;
+      color: $text-color;
     }
     &:hover {
       background: #bbb;
     }
+  }
+
+  &__line {
+    height: 1px;
+    background-color: $line-color;
   }
 }
