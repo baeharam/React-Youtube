@@ -1,10 +1,15 @@
 import React from 'react';
-import './App.css';
+import Header from './components/Header/Header';
+import Contents from './components/Contents/Contents';
+import 'normalize.css';
+import './reset.css';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <>
+      <Header />
+      <Contents />
+    </>
   );
 }
 
