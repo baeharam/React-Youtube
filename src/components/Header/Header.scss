@@ -11,7 +11,6 @@ header {
     height: 56px;
     flex-direction: row;
     align-items: center;
-    button { height: 100%; }
     &__menu {
       margin-right: 20px;
       &-icon {
@@ -20,7 +19,10 @@ header {
       }
     }
     &__logo {
-      max-height: 80%;
+      height: 100%;
+      &-img {
+        height: 100%;
+      }
     }
     &__search-bar {
       width: 60%;
@@ -49,6 +51,7 @@ header {
       }
     }
     &__profile {
+      position: relative;
       width: 30px;
       height: 30px;
       background-color: black;
